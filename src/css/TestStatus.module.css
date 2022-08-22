@@ -1,0 +1,21 @@
+.statusContainer {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  height: 50px;
+  border: 1px solid var(--color-tone-1);
+  border-right: none;
+}
+
+.statusBar {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--color-tone-1);
+}
+
+.activeBar {
+  background-color: var(--color-tone-2);
+  color: white;
+}

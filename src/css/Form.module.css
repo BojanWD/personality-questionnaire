@@ -1,0 +1,47 @@
+.formContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.warning {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.table {
+  margin: 1rem auto;
+
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background-color: var(--color-tone-2);
+  color: white;
+}
+
+.table th,
+td {
+  padding: 0.3rem 1rem;
+}
+
+tr:nth-child(odd) {
+  background-color: #b3cbd2;
+}
+
+.table tr {
+  border-top: 2px solid var(--color-tone-2);
+  border-bottom: 2px solid var(--color-tone-2);
+}
+
+.labelCell {
+  width: 50%;
+  text-align: left;
+}
+
+.numberInput {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
