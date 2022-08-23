@@ -1,6 +1,14 @@
+.backgroundLayer {
+  padding: 2rem 0;
+  background-color: var(--color-tone-4);
+  min-height: calc(
+    100vh - var(--nav-height) - var(--hero-height) - var(--status-height)
+  );
+}
+
 .formContainer {
+  margin: 0 auto;
   max-width: 1200px;
-  margin: 2rem auto;
   text-align: center;
 }
 
@@ -27,21 +35,43 @@ td {
 }
 
 tr:nth-child(odd) {
-  background-color: #b3cbd2;
+  background-color: var(--color-tone-5);
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-tone-3);
 }
 
 .table tr {
-  border-top: 2px solid var(--color-tone-2);
-  border-bottom: 2px solid var(--color-tone-2);
+  border-top: 5px solid var(--color-tone-4);
+  border-bottom: 5px solid var(--color-tone-4);
 }
 
 .labelCell {
   width: 50%;
   text-align: left;
+  font-size: 1.1rem;
 }
 
 .numberInput {
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.submitButton {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--color-tone-2);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.instructions {
+  margin: 0 5%;
+  text-align: left;
 }

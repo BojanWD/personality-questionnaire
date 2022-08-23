@@ -3,6 +3,12 @@
 :root {
   --color-tone-1: #013a49;
   --color-tone-2: #015368;
+  --color-tone-3: #e6eef0;
+  --color-tone-4: #99bac3;
+  --color-tone-5: #ccdde1;
+  --nav-height: 60px;
+  --hero-height: 308px;
+  --status-height: 50px;
 }
 
 * {
@@ -13,14 +19,39 @@
   color: var(--color-tone-1);
 }
 
-/* Chrome, Safari, Edge, Opera */
+/* Chrome, Safari, Edge, Opera - remove arrows from the input number */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Firefox */
+/* Firefox - remove arrows from the input number */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 3px solid var(--color-tone-1);
+  cursor: pointer;
+
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+input[type="radio"]:disabled {
+  box-shadow: inset 1.5rem 1.5rem var(--color-tone-2);
+  opacity: 0.5;
+}
+
+input:checked {
+  box-shadow: inset 1.5rem 1.5rem var(--color-tone-2);
 }

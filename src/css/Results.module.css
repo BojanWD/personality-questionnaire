@@ -1,0 +1,27 @@
+.backgroundLayer {
+  padding: 2rem 0;
+  background-color: var(--color-tone-4);
+  min-height: calc(
+    100vh - var(--nav-height) - var(--hero-height) - var(--status-height)
+  );
+}
+
+.resultsContainer {
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.resultHeading {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.resultSubHeading {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.resultText {
+  margin-bottom: 2rem;
+}

@@ -1,5 +1,6 @@
 .statusContainer {
   max-width: 1200px;
+  height: var(--status-height);
   display: flex;
   margin: 0 auto;
   height: 50px;
