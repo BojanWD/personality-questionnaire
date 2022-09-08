@@ -18,6 +18,7 @@ const initialState = {
     openness: 0,
     conscientiousness: 0,
   },
+  norm: 0,
 };
 
 function App() {
@@ -39,6 +40,10 @@ function App() {
     dispatch({ type: "CHANGE_ANSWER", payload: [id, value] });
   };
 
+  const calculateScores = () => {
+    dispatch({ type: "CALCULATE_SCORES" });
+  };
+
   return (
     <>
       <NavbarAndHero />
@@ -53,8 +58,14 @@ function App() {
       {state.stage === 1 && (
         <TestItems changeAnswer={changeAnswer} changeStage={changeStage} />
       )}
-      {state.stage === 2 && <Results />}
-      {console.log(state.answers)}
+      {state.stage === 2 && (
+        <Results
+          calculateScores={calculateScores}
+          scores={state.scores}
+          norm={state.norm}
+        />
+      )}
+      {console.log(state.scores)}
     </>
   );
 }

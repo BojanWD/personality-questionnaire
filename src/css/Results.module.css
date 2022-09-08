@@ -20,6 +20,7 @@
 .resultSubHeading {
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  text-transform: capitalize;
 }
 
 .resultText {
