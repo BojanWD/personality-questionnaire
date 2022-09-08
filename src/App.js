@@ -50,7 +50,9 @@ function App() {
           changeStage={changeStage}
         />
       )}
-      {state.stage === 1 && <TestItems changeAnswer={changeAnswer} />}
+      {state.stage === 1 && (
+        <TestItems changeAnswer={changeAnswer} changeStage={changeStage} />
+      )}
       {state.stage === 2 && <Results />}
       {console.log(state.answers)}
     </>

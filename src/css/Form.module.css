@@ -75,3 +75,14 @@ tr:nth-child(even) {
   margin: 0 5%;
   text-align: left;
 }
+
+.randomGeneratorContainer {
+  border: 3px solid white;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.randomGeneratorContainer p {
+  margin-bottom: 1rem;
+}

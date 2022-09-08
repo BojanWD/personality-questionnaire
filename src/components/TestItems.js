@@ -1,11 +1,21 @@
 import React from "react";
 import { big5 } from "../data/data";
 import styles from "../css/Form.module.css";
+import { useState } from "react";
 
 function TestItems({ changeAnswer }) {
+  const [randomlyGenerated, setRandomlyGenerated] = useState(false);
+
   const handleAnswer = (e, id) => {
     const value = Number(e.target.value);
     changeAnswer(id, value);
+  };
+
+  const createRandomTest = () => {
+    for (let i = 1; i <= 50; i++) {
+      changeAnswer(i, Math.floor(Math.random() * (5 - 1 + 1) + 1)); //generate answers for each question between 1 and 5
+    }
+    setRandomlyGenerated(true);
   };
 
   return (
@@ -24,6 +34,16 @@ function TestItems({ changeAnswer }) {
             <br /> &gt;&gt; 4 - Agree a little
             <br /> &gt;&gt; 5 - Agree strongly
           </p>
+          <div className={styles.randomGeneratorContainer}>
+            <p>
+              If you don't have the time to do the questionnaire but want to see
+              a results example, click the button below to randomly generate a
+              test score and then submit at the bottom of the page.
+            </p>
+            <button onClick={createRandomTest} className={styles.submitButton}>
+              Generate Random Scores
+            </button>
+          </div>
         </div>
         <form>
           <table className={styles.table}>
@@ -48,7 +68,8 @@ function TestItems({ changeAnswer }) {
                         name={item.id}
                         id={item.id}
                         value="1"
-                        required
+                        required={randomlyGenerated ? false : true}
+                        disabled={randomlyGenerated ? true : false}
                         onChange={(e) => {
                           handleAnswer(e, item.id);
                         }}
@@ -60,6 +81,7 @@ function TestItems({ changeAnswer }) {
                         name={item.id}
                         id={item.id}
                         value="2"
+                        disabled={randomlyGenerated ? true : false}
                         onChange={(e) => {
                           handleAnswer(e, item.id);
                         }}
@@ -71,6 +93,7 @@ function TestItems({ changeAnswer }) {
                         name={item.id}
                         id={item.id}
                         value="3"
+                        disabled={randomlyGenerated ? true : false}
                         onChange={(e) => {
                           handleAnswer(e, item.id);
                         }}
@@ -82,6 +105,7 @@ function TestItems({ changeAnswer }) {
                         name={item.id}
                         id={item.id}
                         value="4"
+                        disabled={randomlyGenerated ? true : false}
                         onChange={(e) => {
                           handleAnswer(e, item.id);
                         }}
@@ -93,6 +117,7 @@ function TestItems({ changeAnswer }) {
                         name={item.id}
                         id={item.id}
                         value="5"
+                        disabled={randomlyGenerated ? true : false}
                         onChange={(e) => {
                           handleAnswer(e, item.id);
                         }}
