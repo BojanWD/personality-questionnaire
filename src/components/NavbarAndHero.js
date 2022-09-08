@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../css/Nav.module.css";
 import personalityPic from "../pics/personality.jpg";
+import { Link } from "react-router-dom";
 
 function NavbarAndHero() {
   return (
@@ -9,10 +10,14 @@ function NavbarAndHero() {
         <h1>Personality Assessment</h1>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <a className={styles.navLink}>Home</a>
+            <Link to="/" className={styles.navLink}>
+              Home
+            </Link>
           </li>
           <li className={styles.navItem}>
-            <a className={styles.navLink}>About</a>
+            <Link to="/about" className={styles.navLink}>
+              About
+            </Link>
           </li>
         </ul>
       </nav>

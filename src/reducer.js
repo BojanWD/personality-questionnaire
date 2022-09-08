@@ -122,6 +122,23 @@ const reducer = (state, action) => {
     };
   }
 
+  if (action.type === "RESET") {
+    return {
+      stage: 0,
+      gender: NaN,
+      age: NaN,
+      answers: {},
+      scores: {
+        extraversion: 0,
+        neuroticism: 0,
+        agreeableness: 0,
+        openness: 0,
+        conscientiousness: 0,
+      },
+      norm: 0,
+    };
+  }
+
   throw new Error("no matching action type");
 };
 

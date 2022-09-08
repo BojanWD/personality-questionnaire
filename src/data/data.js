@@ -273,6 +273,4 @@ big5.forEach((el) => {
   itemIDs[el.id] = [el.type, el.reverse];
 });
 
-console.log(itemIDs);
-
 export { itemIDs, big5, big5Norms, traitDescriptions };

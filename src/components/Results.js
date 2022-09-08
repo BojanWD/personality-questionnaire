@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import styles from "../css/Results.module.css";
+import styles2 from "../css/Form.module.css";
 import { big5Norms, traitDescriptions } from "../data/data";
 
-function Results({ calculateScores, scores, norm }) {
+function Results({ calculateScores, reset, scores, norm }) {
   const [output, setOutput] = useState([
     { trait: "extraversion", lvl: "" },
     { trait: "neuroticism", lvl: "" },
@@ -39,7 +40,6 @@ function Results({ calculateScores, scores, norm }) {
         }
       }
     }
-    console.log(currentNorm, results);
 
     setOutput((pS) => {
       return pS.map((el) => {
@@ -54,7 +54,14 @@ function Results({ calculateScores, scores, norm }) {
         <h3 className={styles.resultHeading}>Your Results</h3>
         {output.map((el, index) => {
           return (
-            <div key={index}>
+            <div
+              key={index}
+              className={
+                index % 2 === 0
+                  ? `${styles.lightBackground}`
+                  : `${styles.ultraLightBackground}`
+              }
+            >
               <h5 className={styles.resultSubHeading}>
                 {el.trait} - {el.lvl}
               </h5>
@@ -66,6 +73,9 @@ function Results({ calculateScores, scores, norm }) {
             </div>
           );
         })}
+        <button className={styles2.submitButton} onClick={reset}>
+          Go Home{" "}
+        </button>
       </section>
     </div>
   );
