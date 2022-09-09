@@ -1,3 +1,15 @@
+## How I worked on this project
+
+My goal was to create a personality questionnaire app which provides feedback to the user after completion.
+
+## Project characteristics
+
+State(s) in project was handled using useReducer hook. useReducer hook was chosen because data related to questionnaire involves multiple sub-values and controlling and manipulating all values seems preferable to having multiple useState hooks. (https://github.com/BojanWD/personality-questionnaire/blob/main/src/reducer.js) 
+Project is fully responsive and has different layouts for big, small and ultra-small screens. CSS was implemented using CSS modules. CSS modules were chosen because they scope class names locally by default and allow to create portable, reusable CSS files without concern about name collisions. 
+Local storage was used to keep track of test completion and to retrieve data if page is reloaded to ensure that the user test progress is not lost. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
