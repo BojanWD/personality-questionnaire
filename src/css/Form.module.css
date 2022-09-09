@@ -19,7 +19,6 @@
 
 .table {
   margin: 1rem auto;
-
   width: 100%;
   border-collapse: collapse;
 }
@@ -86,4 +85,19 @@ tr:nth-child(even) {
 
 .randomGeneratorContainer p {
   margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .table {
+    overflow: hidden;
+  }
+  .labelCell {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .labelCell {
+    font-size: 0.8rem;
+  }
 }
