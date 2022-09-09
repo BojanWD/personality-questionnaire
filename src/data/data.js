@@ -231,7 +231,7 @@ const traitDescriptions = {
     low: "People low in extroversion are more likely to be people “of few words who are quiet, introspective, reserved, and thoughtful.",
     average:
       "Your score on extraversion is close to average indicating that you can strike a healthy balance between active social life and time for yourself.",
-    high: "People high in extroversion tend to seek out opportunities for social interaction, where they are often the “life of the party.” They are comfortable with others, are gregarious, and are prone to action rather than contemplation (Lebowitz, 2016a).",
+    high: "People high in extroversion tend to seek out opportunities for social interaction, where they are often the “life of the party.” They are comfortable with others, are gregarious, and are prone to action rather than contemplation.",
   },
   neuroticism: {
     description:
@@ -239,7 +239,7 @@ const traitDescriptions = {
     low: "Individuals who score on the low end of neuroticism are more likely to feel confident, sure of themselves, and adventurous. They may also be brave and unencumbered by worry or self-doubt.",
     average:
       "You are average on neuroticism indicating that you handle everyday stressors well but you are not too emotionally cold and distant. ",
-    high: "Those high in neuroticism are generally prone to anxiety, sadness, worry, and low self-esteem. They may be temperamental or easily angered, and they tend to be self-conscious and unsure of themselves (Lebowitz, 2016a).",
+    high: "Those high in neuroticism are generally prone to anxiety, sadness, worry, and low self-esteem. They may be temperamental or easily angered, and they tend to be self-conscious and unsure of themselves.",
   },
   agreeableness: {
     description:
@@ -247,19 +247,19 @@ const traitDescriptions = {
     low: "People on the low end of the agreeableness spectrum are less likely to be trusted and liked by others. They tend to be callous, blunt, rude, ill-tempered, antagonistic, and sarcastic. Although not all people who are low in agreeableness are cruel or abrasive, they are not likely to leave others with a warm fuzzy feeling.",
     average:
       "You scored average on agreeableness. This indicates a  flexible intersocial behavior where people can create close connections with others but are not overly concerned about being accepted. ",
-    high: "People high in agreeableness tend to be well-liked, respected, and sensitive to the needs of others. They likely have few enemies and are affectionate to their friends and loved ones, as well as sympathetic to the plights of strangers (Lebowitz, 2016a).",
+    high: "People high in agreeableness tend to be well-liked, respected, and sensitive to the needs of others. They likely have few enemies and are affectionate to their friends and loved ones, as well as sympathetic to the plights of strangers.",
   },
   conscientiousness: {
     description:
-      "Conscientiousness is a trait that can be described as the tendency to control impulses and act in socially acceptable ways, behaviors that facilitate goal-directed behavior (John & Srivastava, 1999). Conscientious people excel in their ability to delay gratification, work within the rules, and plan and organize effectively.",
+      "Conscientiousness is a trait that can be described as the tendency to control impulses and act in socially acceptable ways, behaviors that facilitate goal-directed behavior. Conscientious people excel in their ability to delay gratification, work within the rules, and plan and organize effectively.",
     low: "People low in conscientiousness are much more likely to procrastinate and to be flighty, impetuous, and impulsive.",
     average:
       "Your conscientiousness score is about average, indicating a good balance between dedication to career and your professional goals, as opposed to relaxation and personal life.  ",
-    high: "People high in conscientiousness are likely to be successful in school and in their careers, to excel in leadership positions, and to doggedly pursue their goals with determination and forethought (Lebowitz, 2016a).",
+    high: "People high in conscientiousness are likely to be successful in school and in their careers, to excel in leadership positions, and to doggedly pursue their goals with determination and forethought.",
   },
   openness: {
     description:
-      "Openness to experience has been described as the depth and complexity of an individual’s mental life and experiences (John & Srivastava, 1999). It is also sometimes called intellect or imagination.",
+      "Openness to experience has been described as the depth and complexity of an individual’s mental life and experiences. It is also sometimes called intellect or imagination.",
     low: "An individual who is low in openness to experience probably prefers routine over variety, sticks to what he or she knows, and prefers less abstract arts and entertainment.",
     average:
       "Your score on openness is close to average indicating a moderate and considerate openness to new experiences.",

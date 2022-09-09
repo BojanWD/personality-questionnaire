@@ -4,7 +4,7 @@ import styles from "../css/Results.module.css";
 import styles2 from "../css/Form.module.css";
 import { big5Norms, traitDescriptions } from "../data/data";
 
-function Results({ calculateScores, reset, scores, norm }) {
+function Results({ calculateScores, reset, scores, norm, setLocalStorage }) {
   const [output, setOutput] = useState([
     { trait: "extraversion", lvl: "" },
     { trait: "neuroticism", lvl: "" },
@@ -48,6 +48,11 @@ function Results({ calculateScores, reset, scores, norm }) {
     });
   };
 
+  const handleClick = () => {
+    reset();
+    setLocalStorage();
+  };
+
   return (
     <div className={styles.backgroundLayer}>
       <section className={styles.resultsContainer}>
@@ -73,7 +78,7 @@ function Results({ calculateScores, reset, scores, norm }) {
             </div>
           );
         })}
-        <button className={styles2.submitButton} onClick={reset}>
+        <button className={styles2.submitButton} onClick={handleClick}>
           Go Home{" "}
         </button>
       </section>

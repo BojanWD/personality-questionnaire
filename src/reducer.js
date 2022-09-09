@@ -139,6 +139,15 @@ const reducer = (state, action) => {
     };
   }
 
+  if (action.type === "SET_IN_MEMORY") {
+    window.localStorage.setItem("state", JSON.stringify(state));
+    return state;
+  }
+
+  if (action.type === "SET_FROM_MEMORY") {
+    return action.payload;
+  }
+
   throw new Error("no matching action type");
 };
 

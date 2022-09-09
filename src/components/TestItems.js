@@ -3,7 +3,7 @@ import { big5 } from "../data/data";
 import styles from "../css/Form.module.css";
 import { useState } from "react";
 
-function TestItems({ changeAnswer, changeStage }) {
+function TestItems({ changeAnswer, changeStage, setLocalStorage, reset }) {
   const [randomlyGenerated, setRandomlyGenerated] = useState(false);
 
   const handleAnswer = (e, id) => {
@@ -18,8 +18,15 @@ function TestItems({ changeAnswer, changeStage }) {
     setRandomlyGenerated(true);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     changeStage(2);
+    setLocalStorage();
+  };
+
+  const handleClick = () => {
+    reset();
+    setLocalStorage();
   };
 
   return (
@@ -135,6 +142,9 @@ function TestItems({ changeAnswer, changeStage }) {
               })}
             </tbody>
           </table>
+          <button className={styles.submitButton} onClick={handleClick}>
+            &#8592; Go Back{" "}
+          </button>
           <button type="submit" className={styles.submitButton}>
             See Results &#8594;
           </button>

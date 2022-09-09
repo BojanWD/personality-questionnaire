@@ -1,7 +1,12 @@
 import React from "react";
 import styles from "../css/Form.module.css";
 
-function InitialInfo({ changeAge, changeGender, changeStage }) {
+function InitialInfo({
+  changeAge,
+  changeGender,
+  changeStage,
+  setLocalStorage,
+}) {
   const handleAgeInput = (e) => {
     const value = Number(e.target.value);
     changeAge(value);
@@ -15,6 +20,7 @@ function InitialInfo({ changeAge, changeGender, changeStage }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     changeStage(1);
+    setLocalStorage();
   };
 
   return (

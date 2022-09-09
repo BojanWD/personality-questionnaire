@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useReducer } from "react";
 import InitialInfo from "./InitialInfo";
 import Results from "./Results";
@@ -24,6 +24,10 @@ const initialState = {
 function Questionnaire() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  useEffect(() => {
+    getLocalStorage();
+  }, []);
+
   const changeGender = (value) => {
     dispatch({ type: "SET_GENDER", payload: value });
   };
@@ -47,6 +51,21 @@ function Questionnaire() {
   const resetApp = () => {
     dispatch({ type: "RESET" });
   };
+
+  //set local storage to prevent complete restart if page is reloaded
+  const setLocalStorage = () => {
+    dispatch({ type: "SET_IN_MEMORY" });
+  };
+
+  const getLocalStorage = () => {
+    const backup = window.localStorage.getItem("state");
+    if (backup !== null)
+      dispatch({
+        type: "SET_FROM_MEMORY",
+        payload: Object(JSON.parse(backup)),
+      });
+  };
+
   return (
     <>
       <TestStatus stage={state.stage} />
@@ -55,15 +74,22 @@ function Questionnaire() {
           changeAge={changeAge}
           changeGender={changeGender}
           changeStage={changeStage}
+          setLocalStorage={setLocalStorage}
         />
       )}
       {state.stage === 1 && (
-        <TestItems changeAnswer={changeAnswer} changeStage={changeStage} />
+        <TestItems
+          changeAnswer={changeAnswer}
+          changeStage={changeStage}
+          setLocalStorage={setLocalStorage}
+          reset={resetApp}
+        />
       )}
       {state.stage === 2 && (
         <Results
           calculateScores={calculateScores}
           reset={resetApp}
+          setLocalStorage={setLocalStorage}
           scores={state.scores}
           norm={state.norm}
         />
